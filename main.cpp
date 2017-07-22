@@ -2,6 +2,7 @@
 // -algorithm to check if anyone has won (checkIfWinner).
 // -check if square taken before setting. just don't set (no error message). reissue pick a
 //    number message.
+// -drawBoard once more before stating Draw.
 
 
 /**
@@ -9,66 +10,7 @@
  */
 #include <iostream>
 
-/**
- * Class that represents the current state of the board.
- */
-class Board{
-
-public:
-
-   /**
-    *
-    */
-   int* getState(){
-      return state;
-   }
-
-   /**
-    *
-    */
-   void setState( int stateP[] ){
-      //state = stateP;
-   }
-
-   /**
-    *
-    */
-   int getNumFreeSquares(){
-      return numFreeSquares;
-   }
-
-   /**
-    *
-    */
-   void setSquare( int num, int pos ){
-      state[ pos ] = num;
-      numFreeSquares--;
-   }
-
-private:
-
-   /**
-    *
-    */
-   int boardLength = 3;
-
-   /**
-    *
-    */
-   int boardHeight = 3;
-
-   /**
-    *
-    */
-   int numFreeSquares = 9;
-
-   /**
-    *
-    */
-   // change to loop and depends on board size:
-   int state[ 9 ] = {};
-
-};
+#include "Board.h"
 
 void drawBoard();
 bool checkIfWinner( Board b );
