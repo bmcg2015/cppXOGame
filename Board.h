@@ -11,38 +11,27 @@ public:
     * param boardLength:
     * param boardHeight:
     */
-   Board( int boardLength, int boardHeight ){
-      setBoardLength( boardLength );
-      setBoardHeight( boardHeight );
-      setNumberFreeSquare( boardLength * boardHeight );
-   }
+   Board( int boardLength, int boardHeight );
 
    /**
     * Default constructor.
     */
-   Board(){
-   }
+   Board();
 
    /**
     *
     */
-   int* getState(){
-      return state;
-   }
+   int* getState();
 
    /**
     *
     */
-   void setState( int stateP[] ){
-      //state = stateP;
-   }
+   void setState( int stateP[] );
 
    /**
     *
     */
-   int getNumFreeSquares(){
-      return numFreeSquares;
-   }
+   int getNumFreeSquares();
 
    /**
     * Places the players move on the board.
@@ -52,55 +41,32 @@ public:
     *
     * returns:    True if the move was placed successfully, false otherwise.
     */
-   bool setSquare( int num, int pos ){
-
-      int* board = getState();
-
-      if( board[ pos ] == 0 ){
-         // change to setState/Pos
-         state[ pos ] = num;
-         numFreeSquares--;
-         return true;
-      }
-
-   return false;
-
-   }
+   bool setSquare( int num, int pos );
 
    /**
     *
     */
-   void setBoardLength( int boardLengthP ){
-      boardLength = boardLengthP;
-   }
+   void setBoardLength( int boardLengthP );
 
    /**
     *
     */
-   int getBoardLength(){
-      return boardLength;
-   }
+   int getBoardLength();
 
    /**
     *
     */
-   void setBoardHeight( int boardHeightP ){
-      boardHeight = boardHeightP;
-   }
+   void setBoardHeight( int boardHeightP );
 
    /**
     *
     */
-   int getBoardHeight(){
-      return boardHeight;
-   }
+   int getBoardHeight();
 
    /**
     *
     */
-   void setNumberFreeSquare( int numFreeSquaresP ){
-      numFreeSquares = numFreeSquaresP;
-   }
+   void setNumberFreeSquare( int numFreeSquaresP );
 
 
 
